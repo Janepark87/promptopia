@@ -14,7 +14,7 @@ const UserSchema = new Schema({
 		unique: [true, 'Email already exists!'],
 		runiqued: [true, 'Email is required!'],
 	},
-	images: {
+	image: {
 		type: String,
 	},
 });
