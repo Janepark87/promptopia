@@ -14,10 +14,11 @@ export default function PromptCard({
 }) {
 	const { data: session } = useSession();
 	const router = useRouter();
-	const pathname = usePathname();
+	const pathName = usePathname();
 	const [copied, setCopied] = useState('');
+
 	const {
-		creator: { username, email, image },
+		creator: { _id: creatorId, username, email, image },
 		prompt,
 		tag,
 	} = post;
@@ -34,7 +35,7 @@ export default function PromptCard({
 				<div className="flex flex-1 cursor-pointer items-center justify-start gap-3">
 					<Image
 						src={image}
-						alt="user image"
+						alt={`${username} avatar`}
 						width={40}
 						height={40}
 						className="rounded-full object-contain"
@@ -54,6 +55,7 @@ export default function PromptCard({
 				<div className="copy_btn" onClick={handleCopyClick}>
 					<Image
 						src={copied === prompt ? images.tick : images.copy}
+						alt="copy icon"
 						width={12}
 						height={12}
 					/>
@@ -64,8 +66,24 @@ export default function PromptCard({
 			<p
 				className="font-inter blue_gradient cursor-pointer text-sm"
 				onClick={() => handleTagClick && handleTagClick(tag)}>
-				{tag}
+				#{tag}
 			</p>
+
+			{/* for profile page */}
+			{session?.user.id === creatorId && pathName === '/profile' && (
+				<div className="flex-end mt-3 gap-4 border-t border-gray-100 pt-3">
+					<p
+						className="font-inter green_gradient cursor-pointer text-sm"
+						onClick={handleEdit}>
+						Edit
+					</p>
+					<p
+						className="font-inter orange_gradient cursor-pointer text-sm"
+						onClick={handleDelete}>
+						Delete
+					</p>
+				</div>
+			)}
 		</div>
 	);
 }

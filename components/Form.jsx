@@ -10,8 +10,7 @@ export default function Form({
 	return (
 		<section className="flex-start mx-auto w-full max-w-full flex-col md:max-w-2xl">
 			<h1 className="head_text text-left">
-				<span className="blue_gradient">{type}</span>
-				Post
+				<span className="blue_gradient">{type}</span> Post
 			</h1>
 
 			<p className="desc text-left">
@@ -28,12 +27,13 @@ export default function Form({
 					</span>
 					<textarea
 						name={post.prompt}
-						className="form_textarea"
-						placeholder="Write your prompt here..."
-						required
+						value={post.prompt}
 						onChange={(e) =>
 							setPost({ ...post, prompt: e.target.value })
 						}
+						className="form_textarea"
+						placeholder="Write your prompt here..."
+						required
 					/>
 				</label>
 
@@ -48,12 +48,13 @@ export default function Form({
 					<input
 						type="text"
 						name={post.tag}
-						className="form_input"
-						placeholder="#tag"
-						required
+						value={post.tag}
 						onChange={(e) =>
 							setPost({ ...post, tag: e.target.value })
 						}
+						className="form_input"
+						placeholder="#tag"
+						required
 					/>
 				</label>
 
