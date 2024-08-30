@@ -5,4 +5,5 @@ export { default as Profile } from './Profile';
 export { default as ProfileCard } from './ProfileCard';
 export { default as Provider } from './Provider';
 export { default as SignInBtn } from './SIgnInBtn';
+export { default as PromptCardList } from './PromptCardList';
 export { default as PromptCard } from './PromptCard';

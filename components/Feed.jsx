@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { PromptCard } from '.';
+import { PromptCardList } from '.';
 
 export default function Feed() {
 	const [searchText, setSearchText] = useState('');
@@ -35,15 +35,7 @@ export default function Feed() {
 				/>
 			</form>
 
-			<div className="prompt_layout mt-16">
-				{posts.map((post) => (
-					<PromptCard
-						key={post._id}
-						post={post}
-						handleTagClick={handleTagClick}
-					/>
-				))}
-			</div>
+			<PromptCardList data={posts} handleTagClick={handleTagClick} />
 		</section>
 	);
 }
