@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Promptopia
 
-## Getting Started
+## Overview
+Promptopia is a Next.js application that demonstrates the powerful features of Next.js by implementing a comprehensive CRUD system for AI prompt sharing. The app utilizes MongoDB for robust database management and NextAuth for secure user authentication.
 
-First, run the development server:
+## Demo
+Check out the live demo: [Promptopia Demo](https://janepark87.github.io/wild-mountain/dashboard)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
+- **Discover & Share AI Prompts:** Users can explore AI prompts from the community and create their own to share.
+- **Manage Prompts:** Easily edit or delete prompts as needed.
+- **Personal Profile Page:** Each user has a profile page displaying all their shared prompts, providing a clear overview of their contributions.
+- **Explore Other Profiles:** View and interact with the profiles of other creators to see the prompts they’ve shared.
+- **Quick Copy to Clipboard:** A handy feature for copying AI prompts directly to the clipboard for easy reuse.
+- **Tag-Based Prompt Search:** Search for prompts using specific tags to quickly find relevant content.
+- **Secure Google Authentication:** Seamless and secure login with Google, powered by NextAuth.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies Used
+- **Next.js:** Framework for building server-rendered React applications.
+- **Tailwind CSS:** Utility-first CSS framework for custom styling.
+- **MongoDB:** NoSQL database for efficient data storage and retrieval.
+- **NextAuth:** Authentication solution providing secure user login with Google.
+- **Vercel:** Hosting platform optimized for Next.js applications.
