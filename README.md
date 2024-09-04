@@ -4,7 +4,7 @@
 Promptopia is a Next.js application that demonstrates the powerful features of Next.js by implementing a comprehensive CRUD system for AI prompt sharing. The app utilizes MongoDB for robust database management and NextAuth for secure user authentication.
 
 ## Demo
-Check out the live demo: [Promptopia Demo](https://janepark87.github.io/wild-mountain/dashboard)
+Check out the live demo: [Promptopia Demo](https://ai-powered-promptopia.vercel.app/)
 
 ## Key Features
 - **Discover & Share AI Prompts:** Users can explore AI prompts from the community and create their own to share.
