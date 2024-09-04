@@ -7,3 +7,4 @@ export { default as Provider } from './Provider';
 export { default as SignInBtn } from './SIgnInBtn';
 export { default as PromptCardList } from './PromptCardList';
 export { default as PromptCard } from './PromptCard';
+export { default as Spinner } from './Spinner';
