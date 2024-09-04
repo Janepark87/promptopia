@@ -6,7 +6,7 @@ export default function Home() {
 			<h1 className="head_text text-center">
 				<span className="mr-4 md:mr-0 md:block">Discover & Share</span>
 				<span className="orange_gradient text-center">
-					AI-Powered Propts
+					AI-Powered Prompts
 				</span>
 			</h1>
 			<p className="desc text-center">

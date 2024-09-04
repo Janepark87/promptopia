@@ -13,8 +13,8 @@ export default function PromptCard({
 	handleDelete,
 }) {
 	const { data: session } = useSession();
-	const router = useRouter();
 	const pathName = usePathname();
+	const router = useRouter();
 	const [copied, setCopied] = useState('');
 
 	const {
@@ -29,10 +29,17 @@ export default function PromptCard({
 		setTimeout(() => setCopied(''), 3000);
 	};
 
+	const handleProfileClick = () => {
+		if (creatorId === session?.user.id) return router.push('/profile');
+		router.push(`/profile/${creatorId}?name=${username}`);
+	};
+
 	return (
 		<div className="prompt_card">
 			<div className="flex items-start justify-between gap-5">
-				<div className="flex flex-1 cursor-pointer items-center justify-start gap-3">
+				<div
+					onClick={handleProfileClick}
+					className="flex flex-1 cursor-pointer items-center justify-start gap-3">
 					<Image
 						src={image}
 						alt={`${username} avatar`}
@@ -52,14 +59,18 @@ export default function PromptCard({
 					</div>
 				</div>
 
-				<div className="copy_btn" onClick={handleCopyClick}>
+				<button
+					type="button"
+					className="copy_btn"
+					onClick={handleCopyClick}
+					aria-label="Copy the prompt">
 					<Image
 						src={copied === prompt ? images.tick : images.copy}
 						alt="copy icon"
 						width={12}
 						height={12}
 					/>
-				</div>
+				</button>
 			</div>
 
 			<p className="font-satoshi my-4 text-sm text-gray-700">{prompt}</p>
