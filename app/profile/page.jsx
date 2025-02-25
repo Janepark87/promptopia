@@ -48,7 +48,7 @@ export default function MyProfile() {
 	return (
 		<div>
 			<Profile
-				name="my"
+				name={session?.user.name}
 				desc="Welcome to your personalized profile page."
 				posts={posts}
 				handleEdit={handleEdit}

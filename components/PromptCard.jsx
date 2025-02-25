@@ -53,9 +53,9 @@ export default function PromptCard({
 							{username}
 						</h3>
 
-						<p className="font-inter text-sm text-gray-500">
+						{/* <p className="font-inter text-sm text-gray-500">
 							{email}
-						</p>
+						</p> */}
 					</div>
 				</div>
 
@@ -73,23 +73,23 @@ export default function PromptCard({
 				</button>
 			</div>
 
-			<p className="font-satoshi my-4 text-sm text-gray-700">{prompt}</p>
+			<p className="my-4 font-satoshi text-sm text-gray-700">{prompt}</p>
 			<p
-				className="font-inter blue_gradient cursor-pointer text-sm"
+				className="blue_gradient cursor-pointer font-inter text-sm"
 				onClick={() => handleTagClick && handleTagClick(tag)}>
-				#{tag}
+				{tag}
 			</p>
 
 			{/* for profile page */}
 			{session?.user.id === creatorId && pathName === '/profile' && (
 				<div className="flex-end mt-3 gap-4 border-t border-gray-100 pt-3">
 					<p
-						className="font-inter green_gradient cursor-pointer text-sm"
+						className="green_gradient cursor-pointer font-inter text-sm"
 						onClick={handleEdit}>
 						Edit
 					</p>
 					<p
-						className="font-inter orange_gradient cursor-pointer text-sm"
+						className="orange_gradient cursor-pointer font-inter text-sm"
 						onClick={handleDelete}>
 						Delete
 					</p>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PromptCard } from '.';
 
 export default function Profile({
@@ -13,17 +14,30 @@ export default function Profile({
 				<span className="blue_gradient">{name} Profile</span>
 			</h1>
 			<p className="desc text-left">{desc}</p>
-
-			<div className="prompt_layout mt-16">
-				{posts.map((post) => (
-					<PromptCard
-						key={post._id}
-						post={post}
-						handleEdit={() => handleEdit && handleEdit(post)}
-						handleDelete={() => handleDelete && handleDelete(post)}
-					/>
-				))}
-			</div>
+			{posts.length === 0 && (
+				<>
+					<p className="desc !mt-0 space-y-6 py-8">
+						📝 No prompts yet. Let's create
+						<Link href="/create-prompt" className="ml-1 underline">
+							a new prompt.
+						</Link>
+					</p>
+				</>
+			)}
+			{posts && (
+				<div className="prompt_layout mt-16">
+					{posts.map((post) => (
+						<PromptCard
+							key={post._id}
+							post={post}
+							handleEdit={() => handleEdit && handleEdit(post)}
+							handleDelete={() =>
+								handleDelete && handleDelete(post)
+							}
+						/>
+					))}
+				</div>
+			)}
 		</section>
 	);
 }

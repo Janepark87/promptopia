@@ -70,7 +70,7 @@ export default function Feed() {
 		<section className="feed">
 			<form
 				onKeyDown={handleSearchKeyDown}
-				className="flex-center relative w-full">
+				className="flex-center relative w-full max-w-xl">
 				<input
 					ref={searchInputRef}
 					type="text"
