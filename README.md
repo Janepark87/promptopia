@@ -21,3 +21,6 @@ Check out the live demo: [Promptopia Demo](https://ai-powered-promptopia.vercel.
 - **MongoDB:** NoSQL database for efficient data storage and retrieval.
 - **NextAuth:** Authentication solution providing secure user login with Google.
 - **Vercel:** Hosting platform optimized for Next.js applications.
+
+## Acknowledgments
+This project is inspired by a tutorial from JavaScript Mastery and serves as a hands-on learning experience for modern full-stack development.
